@@ -52,7 +52,7 @@ static NSString *tvBootURL = @"http://tvos.fuzhuo.me/neteaseMusic_TVOS/server/ne
     appControllerContext.launchOptions = appControllerOptions;
     
     self.appController = [[TVApplicationController alloc] initWithContext:appControllerContext window:self.window delegate:self];
-
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
     return YES;
 }
 
@@ -62,6 +62,7 @@ static NSString *tvBootURL = @"http://tvos.fuzhuo.me/neteaseMusic_TVOS/server/ne
     [self executeRemoteMethod:@"onWillResignActive" completion: ^(BOOL success) {
         // ...
     }];
+    [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
 }
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
@@ -70,6 +71,7 @@ static NSString *tvBootURL = @"http://tvos.fuzhuo.me/neteaseMusic_TVOS/server/ne
     [self executeRemoteMethod:@"onDidEnterBackground" completion: ^(BOOL success) {
         // ...
     }];
+    [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
 }
 
 - (void)applicationWillEnterForeground:(UIApplication *)application {
@@ -77,6 +79,7 @@ static NSString *tvBootURL = @"http://tvos.fuzhuo.me/neteaseMusic_TVOS/server/ne
     [self executeRemoteMethod:@"onWillEnterForeground" completion: ^(BOOL success) {
         // ...
     }];
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
 }
 
 - (void)applicationDidBecomeActive:(UIApplication *)application {
@@ -84,6 +87,7 @@ static NSString *tvBootURL = @"http://tvos.fuzhuo.me/neteaseMusic_TVOS/server/ne
     [self executeRemoteMethod:@"onDidBecomeActive" completion: ^(BOOL success) {
         // ...
     }];
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
 }
 
 - (void)applicationWillTerminate:(UIApplication *)application {
@@ -91,12 +95,14 @@ static NSString *tvBootURL = @"http://tvos.fuzhuo.me/neteaseMusic_TVOS/server/ne
     [self executeRemoteMethod:@"onWillTerminate" completion: ^(BOOL success) {
         // ...
     }];
+    [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
 }
 
 #pragma mark TVApplicationControllerDelegate
 
 - (void)appController:(TVApplicationController *)appController didFinishLaunchingWithOptions:(nullable NSDictionary<NSString *, id> *)options {
     NSLog(@"appController:didFinishLaunchingWithOptions: invoked with options: %@", options);
+    [[UIApplication sharedApplication] setIdleTimerDisabled:YES];
 }
 
 - (void)appController:(TVApplicationController *)appController didFailWithError:(NSError *)error {
@@ -109,10 +115,12 @@ static NSString *tvBootURL = @"http://tvos.fuzhuo.me/neteaseMusic_TVOS/server/ne
     [self.appController.navigationController presentViewController:alertController animated:YES completion: ^() {
         // ...
     }];
+    [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
 }
 
 - (void)appController:(TVApplicationController *)appController didStopWithOptions:(nullable NSDictionary<NSString *, id> *)options {
     NSLog(@"appController:didStopWithOptions: invoked with options: %@", options);
+    [[UIApplication sharedApplication] setIdleTimerDisabled:NO];
 }
 
 @end
