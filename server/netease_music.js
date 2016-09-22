@@ -13,7 +13,8 @@ function warningDoc(text) {
     return parsedTemplate;
 }
 
-function playMusicList(music_list_url) {
+function playMusicList(music_list_url_) {
+    var music_list_url = baseURL+'/'+music_list_url_;
     console.log('play music url:'+music_list_url);
     if (musicListURL == music_list_url) {
         player.present();
