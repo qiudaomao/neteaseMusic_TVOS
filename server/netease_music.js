@@ -114,6 +114,7 @@ App.onLaunch = function(options) {
     console.log("zfu base URL is " + baseURL);
     player = new Player();
     musicListURL = "";
-    var templateURL = "templates/HelloWorld.xml";
+    //var templateURL = "templates/HelloWorld.xml";
+    var templateURL = "main_page.php";
     getDocument(templateURL);
 }
