@@ -137,6 +137,9 @@ $j=json_decode($str,true);
 <?php
     }
 ?>
+            <listItemLockup onselect="resumePlayer()">
+               <title>回到播放界面</title>
+            </listItemLockup>
          </section>
       </list>
    </catalogTemplate>
