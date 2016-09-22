@@ -21,13 +21,17 @@ function encrypted_id($dfsid) {
     return $code;
 } 
 
+function rp($ori) {
+    return htmlspecialchars($ori,ENT_COMPAT);
+}
+
 if ($j==null || !isset($j['result']) || !isset($j['result']['tracks'])) {
     die("{'status':'error','msg':'服务器数据不正确'}");
 }
 
 foreach($j['result']['tracks'] as $key=>$value) {
-    $ret_json['tracks'][$i]['name']=$value['name'];
-    $ret_json['tracks'][$i]['artist']=$value['artists'][0]['name'];
+    $ret_json['tracks'][$i]['name']=rp($value['name']);
+    $ret_json['tracks'][$i]['artist']=rp($value['artists'][0]['name']);
     $ret_json['tracks'][$i]['song_id']=$value['id'];
     $ret_json['tracks'][$i]['mp3Url']=str_replace('http://m','http://p',$value['mp3Url']);
     $ret_json['tracks'][$i]['img']=$value['album']['picUrl'];
