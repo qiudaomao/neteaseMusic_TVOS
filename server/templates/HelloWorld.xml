@@ -1,0 +1,9 @@
+<document>
+    <alertTemplate>
+        <description>用来刷新的主页</description>
+        <button onselect="getDocument('main_page.php')">
+<!--        <button onselect="playMusicList('http://www.lavaradio.com/api/play.playNowChannels.json?')">-->
+            <text>进入网易云音乐</text>
+        </button>
+    </alertTemplate>
+</document>
