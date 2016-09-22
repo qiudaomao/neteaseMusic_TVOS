@@ -6,7 +6,7 @@ if (isset($_GET['s'])) {
     $data = _cget('http://music.163.com/api/search/get',false, $post_data);
     $j = json_decode($data, true);
 }
-$url='http://localhost/netease_music_tvos/server/playlist.php?playlist_id=';
+$url='playlist.php?playlist_id=';
 function rp($ori) {
     return htmlspecialchars($ori,ENT_COMPAT);
 }

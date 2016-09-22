@@ -13,7 +13,8 @@ function warningDoc(text) {
     return parsedTemplate;
 }
 
-function playMusicList(music_list_url) {
+function playMusicList(music_list_url_) {
+    var music_list_url = baseURL+'/'+music_list_url_;
     console.log('play music url:'+music_list_url);
     if (musicListURL == music_list_url) {
         player.present();
@@ -113,6 +114,7 @@ App.onLaunch = function(options) {
     console.log("zfu base URL is " + baseURL);
     player = new Player();
     musicListURL = "";
-    var templateURL = "templates/HelloWorld.xml";
+    //var templateURL = "templates/HelloWorld.xml";
+    var templateURL = "main_page.php";
     getDocument(templateURL);
 }
