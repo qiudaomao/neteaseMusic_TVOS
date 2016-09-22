@@ -9,8 +9,8 @@
 #import "AppDelegate.h"
 
 // tvBaseURL points to a server on your local machine. To create a local server for testing purposes, use the following command inside your project folder from the Terminal app: ruby -run -ehttpd . -p9001. See NSAppTransportSecurity for information on using a non-secure server.
-static NSString *tvBaseURL = @"http://localhost/netease_music_tvos/server/";
-static NSString *tvBootURL = @"http://localhost/netease_music_tvos/server/netease_music.js";
+static NSString *tvBaseURL = @"http://tvos.fuzhuo.me/neteaseMusic_TVOS/server/";
+static NSString *tvBootURL = @"http://tvos.fuzhuo.me/neteaseMusic_TVOS/server/netease_music.js";
 
 @interface AppDelegate ()
 
