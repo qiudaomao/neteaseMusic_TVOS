@@ -13,6 +13,10 @@ function warningDoc(text) {
     return parsedTemplate;
 }
 
+function resumePlayer() {
+    player.present();
+}
+
 function playMusicList(music_list_url_) {
     var music_list_url = baseURL+'/'+music_list_url_;
     console.log('play music url:'+music_list_url);
