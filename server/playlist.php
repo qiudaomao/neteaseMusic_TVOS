@@ -31,7 +31,11 @@ if ($j==null || !isset($j['result']) || !isset($j['result']['tracks'])) {
 
 foreach($j['result']['tracks'] as $key=>$value) {
     $ret_json['tracks'][$i]['name']=rp($value['name']);
-    $ret_json['tracks'][$i]['artist']=rp($value['artists'][0]['name']);
+    $author="";
+    foreach($value['artists'] as $k=>$v) {
+        $author.=' '.$v['name'];
+    }
+    $ret_json['tracks'][$i]['artist']=rp($author);
     $ret_json['tracks'][$i]['song_id']=$value['id'];
     $ret_json['tracks'][$i]['mp3Url']=str_replace('http://m','http://p',$value['mp3Url']);
     $ret_json['tracks'][$i]['img']=$value['album']['picUrl'];
