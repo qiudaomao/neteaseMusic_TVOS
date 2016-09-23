@@ -9,6 +9,6 @@ You need sideload this app to appletv4
 
 不提供登录，只提供一些流行歌单的浏览与收听。服务器的代码也在里面，可以自己搭以保证稳定工作。
 
-![](http://fuzhuo.qiniudn.com/icon.png)
-![](http://fuzhuo.qiniudn.com/list.png)
-![](http://fuzhuo.qiniudn.com/play.png)
+![](https://ooo.0o0.ooo/2016/09/23/57e4e0201718f.png)
+![](https://ooo.0o0.ooo/2016/09/23/57e4e0203d9c8.png)
+![](https://ooo.0o0.ooo/2016/09/23/57e4e02044b9c.png)
