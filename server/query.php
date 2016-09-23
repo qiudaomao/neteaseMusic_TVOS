@@ -2,7 +2,7 @@
 require('cget.php');
 if (isset($_GET['s'])) {
     $keyword=$_GET['s'];
-    $post_data="limit=20&s=".$keyword."&type=1000&sub=false&offset=0";
+    $post_data="limit=40&s=".$keyword."&type=1000&sub=false&offset=0";
     $data = _cget('http://music.163.com/api/search/get',false, $post_data);
     $j = json_decode($data, true);
 }
