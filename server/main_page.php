@@ -122,7 +122,7 @@ $j=json_decode($str,true);
 ?>
                         <lockup onselect="getDocument('query.php?s=<?php echo urlencode($value1['name']);?>')">
                             <img src="<?php echo $value1['pic_url'];?>" width="250" height="376" />
-                            <!-- <title><?php echo $value1['name'];?></title> -->
+                            <title><?php echo $value1['name'];?></title>
                             <overlay>
                                 <title><?php echo $value1['name'];?></title>
                             </overlay>
