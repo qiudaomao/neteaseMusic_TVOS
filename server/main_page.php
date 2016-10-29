@@ -102,6 +102,19 @@ $str='{
 $j=json_decode($str,true);
 ?>
 <document>
+   <head>
+     <style>
+     .overlay_title {
+         background-color: rgba(0,0,0,0.6);
+         color: #FFFFFF;
+         text-align: center;
+     }
+     .overlay {
+         padding: 0;
+         margin: 0;
+     }
+     </style>
+   </head>
    <catalogTemplate>
       <banner>
          <title>网易云音乐</title>
@@ -112,7 +125,7 @@ $j=json_decode($str,true);
     foreach($j['data'] as $key=>$value) {
 ?>
             <listItemLockup>
-               <title><?php echo $value['title'];?></title>
+               <title><![CDATA[<?php echo $value['title'];?>]]></title>
                <decorationLabel><?php echo count($value['data']);?></decorationLabel>
                <relatedContent>
                   <grid>
@@ -121,10 +134,9 @@ $j=json_decode($str,true);
         foreach($value['data'] as $key1=>$value1) {
 ?>
                         <lockup onselect="getDocument('query.php?s=<?php echo urlencode($value1['name']);?>')">
-                            <img src="<?php echo $value1['pic_url'];?>" width="250" height="376" />
-                            <title><?php echo $value1['name'];?></title>
-                            <overlay>
-                                <title><?php echo $value1['name'];?></title>
+                            <img src="<?php echo $value1['pic_url'];?>" width="300" height="34" />
+                            <overlay class="overlay">
+                                <title class="overlay_title"><?php echo $value1['name'];?></title>
                             </overlay>
                         </lockup>
 <?php
