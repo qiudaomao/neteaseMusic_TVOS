@@ -243,7 +243,7 @@
 				DEVELOPMENT_TEAM = SGZE33W2XX;
 				INFOPLIST_FILE = neteaseMusicTVOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hengdi.neteaseMusicTVOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hengdi.neteaseMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -256,7 +256,7 @@
 				DEVELOPMENT_TEAM = SGZE33W2XX;
 				INFOPLIST_FILE = neteaseMusicTVOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.hengdi.neteaseMusicTVOS;
+				PRODUCT_BUNDLE_IDENTIFIER = com.hengdi.neteaseMusic;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -280,6 +280,7 @@
 				E9145A3D1D93D26A00364AFC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
