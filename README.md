@@ -1,5 +1,7 @@
 #网易云音乐 for appletv4
 
+此项目现已合并至LazyCat请跳转 https://github.com/fuzhuo/LazyCat
+
 You need sideload this app to appletv4
 
 + Plugin usb to appletv4, connect to Mac
